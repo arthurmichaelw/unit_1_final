@@ -14,12 +14,12 @@ const snakesAndLadders = [
     new Tile(51, 67),
     new Tile(71, 91),
     new Tile(17, 7),
-    new Tile(54, 34),
+    new Tile(54, 35),
     new Tile(62, 19),
     new Tile(64, 60),
     new Tile(87, 24),
     new Tile(93, 73),
-    new Tile(98, 78)
+    new Tile(98, 79)
 ]
 
 class Players {
@@ -136,7 +136,7 @@ const closeInstrModal = (evt) => {
 
 //Event Listeners
 
-setTimeout(openInstrModal, 1000)
+setTimeout(openInstrModal, 1400)
 
 closeInstrModalBtn.addEventListener("click", closeInstrModal)
 
