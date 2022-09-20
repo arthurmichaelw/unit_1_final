@@ -32,69 +32,74 @@ class Players {
         let r = Math.floor(Math.random() * 6) + 1;
         this.next = (this.spot + r);
         console.log('roll', r)
+        // document.getElementById(`${this.spot}`).innerText = ' '
+        // document.getElementById(`${this.next}`).textContent = '◉'
+        // this.spot = this.next
         if(snakesAndLadders[0].startPoint === this.spot){
             this.next = snakesAndLadders[0].endPoint
-            document.getElementById(`${this.spot}`).innerText = ' '
+            document.getElementById(`${this.spot}`).innerText = '?'
             document.getElementById(`${this.next}`).textContent = '◉'
             this.spot = this.next
         } else if(snakesAndLadders[1].startPoint === this.spot){
             this.next = snakesAndLadders[1].endPoint
-            document.getElementById(`${this.spot}`).innerText = ' '
+            document.getElementById(`${this.spot}`).innerText = '?'
             document.getElementById(`${this.next}`).textContent = '◉'
             this.spot = this.next
         } else if(snakesAndLadders[2].startPoint === this.spot){
             this.next = snakesAndLadders[2].endPoint
-            document.getElementById(`${this.spot}`).innerText = ' '
+            document.getElementById(`${this.spot}`).innerText = '?'
             document.getElementById(`${this.next}`).textContent = '◉'
             this.spot = this.next
         } else if(snakesAndLadders[3].startPoint === this.spot){
             this.next = snakesAndLadders[3].endPoint
-            document.getElementById(`${this.spot}`).innerText = ' '
+            document.getElementById(`${this.spot}`).innerText = '?'
             document.getElementById(`${this.next}`).textContent = '◉'
             this.spot = this.next
         } else if(snakesAndLadders[4].startPoint === this.spot){
             this.next = snakesAndLadders[4].endPoint
-            document.getElementById(`${this.spot}`).innerText = ' '
+            document.getElementById(`${this.spot}`).innerText = '?'
             document.getElementById(`${this.next}`).textContent = '◉'
             this.spot = this.next
         } else if(snakesAndLadders[5].startPoint === this.spot){
             this.next = snakesAndLadders[5].endPoint
-            document.getElementById(`${this.spot}`).innerText = ' '
+            document.getElementById(`${this.spot}`).innerText = '?'
             document.getElementById(`${this.next}`).textContent = '◉'
             this.spot = this.next
         } else if(snakesAndLadders[6].startPoint === this.spot){
             this.next = snakesAndLadders[6].endPoint
-            document.getElementById(`${this.spot}`).innerText = ' '
+            document.getElementById(`${this.spot}`).innerText = '!'
             document.getElementById(`${this.next}`).textContent = '◉'
             this.spot = this.next
         } else if(snakesAndLadders[7].startPoint === this.spot){
             this.next = snakesAndLadders[7].endPoint
-            document.getElementById(`${this.spot}`).innerText = ' '
+            document.getElementById(`${this.spot}`).innerText = '!'
             document.getElementById(`${this.next}`).textContent = '◉'
             this.spot = this.next
         } else if(snakesAndLadders[8].startPoint === this.spot){
             this.next = snakesAndLadders[9].endPoint
-            document.getElementById(`${this.spot}`).innerText = ' '
+            document.getElementById(`${this.spot}`).innerText = '!'
             document.getElementById(`${this.next}`).textContent = '◉'
             this.spot = this.next
         } else if(snakesAndLadders[10].startPoint === this.spot){
             this.next = snakesAndLadders[10].endPoint
-            document.getElementById(`${this.spot}`).innerText = ' '
+            document.getElementById(`${this.spot}`).innerText = '!'
             document.getElementById(`${this.next}`).textContent = '◉'
             this.spot = this.next
         } else if(snakesAndLadders[11].startPoint === this.spot){
             this.next = snakesAndLadders[11].endPoint
-            document.getElementById(`${this.spot}`).innerText = ' '
+            document.getElementById(`${this.spot}`).innerText = '!'
             document.getElementById(`${this.next}`).textContent = '◉'
             this.spot = this.next
         } else if(snakesAndLadders[12].startPoint === this.spot){
             this.next = snakesAndLadders[12].endPoint
-            document.getElementById(`${this.spot}`).innerText = ' '
+            document.getElementById(`${this.spot}`).innerText = '!'
             document.getElementById(`${this.next}`).textContent = '◉'
-            this.spot = this.next }
+            this.spot = this.next 
+        } else {
         document.getElementById(`${this.spot}`).innerText = ' '
         document.getElementById(`${this.next}`).textContent = '◉'
         this.spot = this.next
+        }
     }
 }
 

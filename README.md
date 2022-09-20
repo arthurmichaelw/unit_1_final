@@ -29,3 +29,5 @@ I'd like to add some sort of line or object that connects the connect pairs of s
 ## Unsolved Problems ##
 
 If they players roll, is above 100 the player piece disappears, until the players location is back on the board and reaches spot 100.
+
+If the player lands on a ! or ? the text gets erased. 
