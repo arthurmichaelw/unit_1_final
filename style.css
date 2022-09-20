@@ -1,43 +1,73 @@
 body {
     margin-top: 0%;
-    background-color: #6052af;
-    font-family: 'Arial';
+    background-image: url(http://2.bp.blogspot.com/-HAZhv8247BM/ViwvfoeQhBI/AAAAAAAAdKE/TiOiCcpD3Kc/s1600/3PDVD_006.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #353242;
+    font-family: 'Edu SA Beginner', cursive;
+}
+
+h2 {
+    font-size: 40px;
+    color: #f75c0e;
+    text-shadow: 1px 1px black;
+}
+
+p {
+    font-size: 25px;
+    color: black;
+    font-weight: 900;
+    text-shadow: 0px 0px .1px black;
+}
+
+li {
+    font-size: 23px;
+    text-shadow: 0px 0px .1px black;
 }
 
 /* Board CSS */
-#playBox {
-    /* margin-left: 10%; */
+#play-box {
+    margin-left: 40%;
     margin-top: 25px;
+    margin-bottom: 25px;
+    opacity: 0.6;
 }
 
 td {
     text-align: center;
-    font-weight: bolder;
-    height: 75px;
-    width: 75px;
+    font-weight: bold;
+    min-height: 65px;
+    max-height: 65px;
+    height: 65px;
+    width: 65px;
+    font-size: 30px;
 }
 
 .Yellow {
-    background-color: #E9C46A;
+    background-color: #828998;
 }
 
 .Red {
-    background-color: #E76F51;
+    background-color: #3a496a;
 }
 .Green {
-    background-color: #2A9D8F;
+    background-color: #383e56;
 }
 
 .Blue {
-    background-color: #264653;
+    background-color: #535b6e;
 }
 
-.Orange {
-    background-color: #F4A261;
+.Trap {
+    background-color: #813638;
+    color: #ffff00;
+    text-shadow: 2px 2px #ff0000;
 }
 
-.Lime {
-    background-color: #86bf0d;
+.Clue {
+    background-color: #ff8d00;
+    color: #ffff00;
+    text-shadow: 2px 2px #ff0000;
 }
 
 
@@ -45,8 +75,8 @@ td {
 /* Modal CSS */
     
 .modal {
-    display: none;
-    background-color: #264653;
+    /* display: none; */
+    background-color: lightseagreen;
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
@@ -62,19 +92,30 @@ td {
 	/*This will set the margins for the top and the bottom to 150px (or larger). The right and left will automatically set themselves (and keep the box centered horizontally).*/
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, .9);
 	/*This will give the box some depth.*/
-	padding: 50px;
-	line-height: 120%;
-    color: white;
+	padding: 40px;
+    padding-top: 0%;
+	line-height: 220%;
+    border: solid black;
+}
+
+#instructions {
+    display: none;
+}
+
+#game-over {
+    display: none;
 }
 
 .modal-button {
     padding: 14px 18px;
-    background-color: #677996;
-    border: none;
-    outline: none;
-    border-radius: 3px;
-    color: white;
+    background-color: #c5de41;
+    border: solid black;
+    border-radius: 5px;
+    color: black;
+    text-shadow: 1px 1px .1px black;
     cursor: pointer;
+    font-family: 'Edu SA Beginner', cursive;
+    font-size: 25px;
 }
 
 /* Dice Roll CSS */
@@ -92,26 +133,25 @@ td {
 }
     
 #dice-roll-btn {
-    margin-right: 0px;
-    margin-left: 200px;
+    margin: 25px auto;
     position: relative;
 }
     
 #side {
-    position: absolute;
+    margin-left: 10%;
+    margin-bottom: 25px;
+    position: fixed;
     top: 1vmin;
     left: 1vmin;
-    height: 25vmin;
     width: 35vmin;
     border: 0.2vmin solid black;
     background-color: lightseagreen;
     text-align: center;
-    font-size: 3.5vmin;
-    border: none;
     border-radius: 4px;
     padding: 3px;
     margin-top: 25px;
-    margin-left: 25px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .9);
+    opacity: 0.6;
 }
     
 #cube_outer {
@@ -164,3 +204,14 @@ td {
     transform: rotateX(90deg) translateY(4vmin);
     transform-origin: bottom;
 }
+
+.trap-line {
+    height: 50px;
+    width: 200px;
+    border-bottom: 10px solid white;
+    /* border-right: 2px solid white; */
+    /* -moz-transform: skew(-45deg);
+    -webkit-transform: skew(-45deg);
+    transform: skew(-45deg); */
+    z-index: 1;
+  }

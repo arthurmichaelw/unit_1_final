@@ -101,10 +101,6 @@ class Players {
 let tiles = new Tile();
 let player = new Players();
 
-const gameOver = document.createElement('div');
-gameOver.setAttribute("class", "modal")
-gameOver.textContent = "Congrats you've won! Refresh the page to play again!";
-
 function renderGame() {
     player.roll()
     console.log('position', player.spot)
@@ -112,30 +108,37 @@ function renderGame() {
 
     if(player.spot >= tiles.length) {
         console.log("game over")
-        document.body.appendChild(gameOver)
-        gameOver.style.display = 'block';
+        // document.body.appendChild(gameOver)
+        gameOverModal.style.display = "block";
     }
 }
 
-const instructionModal = document.querySelector(".modal")
+const instructionModal = document.querySelector("#instructions")
 const closeInstrModalBtn = document.querySelector("#closeModal")
         
 const diceRollBtn = document.querySelector("#dice-roll-btn")
-const diceModal = document.querySelector("#dice-roll")
-        
+const diceModal = document.getElementById("side")
+
+const gameOverModal = document.querySelector("#game-over")
+const refreshPageBtn = document.querySelector("#gameOverBtn")
+
+const gameBox = document.getElementById("play-box")
+
 const openInstrModal = (evt) => {
     instructionModal.style.display = "block";
 }
         
 const closeInstrModal = (evt) => {
-    instructionModal.style.display = "none"
+    instructionModal.style.display = "none";
+    diceModal.style.opacity = 1;
+    gameBox.style.opacity = 1;
 }
 
 //Event Listeners
 
-closeInstrModalBtn.addEventListener("click", closeInstrModal)
-
 setTimeout(openInstrModal, 1000)
+
+closeInstrModalBtn.addEventListener("click", closeInstrModal)
 
 document.addEventListener('keydown',(evt) => {
     // console.log(evt)
@@ -144,7 +147,10 @@ document.addEventListener('keydown',(evt) => {
     }
 })
 
-// diceRollBtn.addEventListener('click', (evt) => {
-//         let diceNum = player.roll()
-//     }
-// )
+diceRollBtn.addEventListener('click', (evt) => {
+        renderGame()
+    }
+)
+
+refreshPageBtn.addEventListener("click", (evt) => {
+    location.reload()})
