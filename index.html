@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+    <title>Snakes and Ladders</title>
+</head>
+<body>
+    <!-- Instruction Modal -->
+    <div class="modal" id="instructions">
+        <h2>Welcome to Snakes and Ladders!</h2>
+        <p>Snakes and Ladders is a straight forward game.</p>
+        <p>The object is to get to the final square using a dice roll to move your player forward on the board.</p>
+        <p>There are few things on the board to help or hinder your progress:</p>
+        <ul>
+            <li>Ladders: Ladders help you move up further up the board, helping you to reach the end of the game sooner.</li>
+            <li>Snakes: Snakes hinder your progress up the board, landing on a snakes mouth will send you down the board to the tail of where the snake lands.</li>
+        </ul>
+        <p>Good luck!</p>
+        <button class="modal-button" id="closeModal">Lets get started!</button>
+    </div>
+    <!-- Game Board -->
+    <div id="playBox">
+        <table>
+            <tr>
+                <td id="100" class="Blue"></td>
+                <td id="99" class="Red"></td>
+                <td id="98" class="Blue">98!78</td>
+                <td id="97" class="Green"></td>
+                <td id="96" class="Orange"></td>
+                <td id="95" class="Blue"></td>
+                <td id="94" class="Orange"></td>
+                <td id="93" class="Blue">93!73</td>
+                <td id="92" class="Green"></td>
+                <td id="91" class="Orange">71?91</td>
+            </tr>
+            <tr> 
+                <td id="81" class="Yellow"></td>
+                <td id="82" class="Lime"></td>
+                <td id="83" class="Orange"></td>
+                <td id="84" class="Yellow"></td>
+                <td id="85" class="Lime"></td>
+                <td id="86" class="Yellow"></td>
+                <td id="87" class="Green">87!24</td>
+                <td id="88" class="Lime"></td>
+                <td id="89" class="Yellow"></td>
+                <td id="90" class="Red"></td> 
+            </tr>
+            <tr>
+                <td id="80" class="Green"></td>
+                <td id="79" class="Blue">98!78</td>
+                <td id="78" class="Red"></td>
+                <td id="77" class="Blue"></td>
+                <td id="76" class="Green">28?76</td>
+                <td id="75" class="Blue"></td>
+                <td id="74" class="Red"></td>
+                <td id="73" class="Blue">93!73</td>
+                <td id="72" class="Orange"></td>
+                <td id="71" class="Blue">71?91</td>
+            </tr>
+            <tr>
+                <td id="61" class="Yellow"></td>
+                <td id="62" class="Lime">62!19</td>
+                <td id="63" class="Yellow"></td>
+                <td id="64" class="Orange">64!60</td>
+                <td id="65" class="Yellow"></td>
+                <td id="66" class="Orange"></td>
+                <td id="67" class="Yellow">51?67</td>
+                <td id="68" class="Green"></td>
+                <td id="69" class="Yellow"></td>
+                <td id="70" class="Green"></td>
+            </tr>
+            <tr>
+                <td id="60" class="Blue">64!60</td>
+                <td id="59" class="Orange"></td>
+                <td id="58" class="Red"></td>
+                <td id="57" class="Blue"></td>
+                <td id="56" class="Red"></td>
+                <td id="55" class="Lime"></td>
+                <td id="54" class="Red">54!34</td>
+                <td id="53" class="Blue"></td>
+                <td id="52" class="Lime"></td>
+                <td id="51" class="Orange">51?67</td>  
+            </tr>
+            <tr>
+                <td id="41" class="Yellow"></td>
+                <td id="42" class="Lime">21?42</td>
+                <td id="43" class="Yellow"></td>
+                <td id="44" class="Green"></td>
+                <td id="45" class="Yellow"></td>
+                <td id="46" class="Green"></td>
+                <td id="47" class="Yellow"></td>
+                <td id="48" class="Green"></td>
+                <td id="49" class="Yellow"></td>
+                <td id="50" class="Red"></td>
+            </tr>
+            <tr>
+                <td id="40" class="Green"></td>
+                <td id="39" class="Blue"></td>
+                <td id="38" class="Red"></td>
+                <td id="37" class="Orange"></td>
+                <td id="36" class="Blue"></td>
+                <td id="35" class="Lime"></td>
+                <td id="34" class="Orange">54!34</td>
+                <td id="33" class="Blue"></td>
+                <td id="32" class="Orange"></td>
+                <td id="31" class="Blue">9?31</td>   
+            </tr>
+            <tr>
+                <td id="21" class="Orange">21?42</td>
+                <td id="22" class="Yellow"></td>
+                <td id="23" class="Green"></td>
+                <td id="24" class="Yellow">87!24</td>
+                <td id="25" class="Green"></td>
+                <td id="26" class="Yellow"></td>
+                <td id="27" class="Red"></td>
+                <td id="28" class="Green">28?76</td>
+                <td id="29" class="Yellow"></td>
+                <td id="30" class="Green"></td>
+            </tr>
+            <tr>
+                <td id="20" class="Blue"></td>
+                <td id="19" class="Red">62!19</td>
+                <td id="18" class="Lime"></td>
+                <td id="17" class="Orange">17!7</td>
+                <td id="16" class="Lime"></td>
+                <td id="15" class="Orange"></td>
+                <td id="14" class="Blue">2?14</td>
+                <td id="13" class="Orange"></td>  
+                <td id="12" class="Lime"></td>
+                <td id="11" class="Orange"></td>
+            </tr>
+            <tr>
+                <td id="1" class="Yellow">◉</td>
+                <td id="2" class="Orange">2?14</td>
+                <td id="3" class="Green"></td>
+                <td id="4" class="Blue"></td>
+                <td id="5" class="Red"></td>
+                <td id="6" class="Yellow"></td>
+                <td id="7" class="Green">17!7</td>
+                <td id="8" class="Yellow"></td>
+                <td id="9" class="Red">9?31</td>
+                <td id="10" class="Blue"></td>
+            </tr>
+        </table>
+    </div>
+    <!-- <div>
+        <div id = "player1"></div>
+        <div id = "player2"></div>
+    </div>
+    <div id="side">
+        <button class="modal-button" id="dice-roll-btn">Lets Roll the Dice!</button>
+            <div id="cube_outer">
+                <div id="cube_inner">
+                    <div id="front">1</div>
+                    <div id="back">2</div>
+                    <div id="left">3</div>
+                    <div id="right">4</div>
+                    <div id="top">5</div>
+                    <div id="bottom">6</div>
+                </div>
+            </div> -->
+    </div>
+</body>
+</html>

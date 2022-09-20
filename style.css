@@ -1,0 +1,166 @@
+body {
+    margin-top: 0%;
+    background-color: #6052af;
+    font-family: 'Arial';
+}
+
+/* Board CSS */
+#playBox {
+    /* margin-left: 10%; */
+    margin-top: 25px;
+}
+
+td {
+    text-align: center;
+    font-weight: bolder;
+    height: 75px;
+    width: 75px;
+}
+
+.Yellow {
+    background-color: #E9C46A;
+}
+
+.Red {
+    background-color: #E76F51;
+}
+.Green {
+    background-color: #2A9D8F;
+}
+
+.Blue {
+    background-color: #264653;
+}
+
+.Orange {
+    background-color: #F4A261;
+}
+
+.Lime {
+    background-color: #86bf0d;
+}
+
+
+
+/* Modal CSS */
+    
+.modal {
+    display: none;
+    background-color: #264653;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left:0;
+    right: 0;
+    z-index: 1;
+    overflow: auto;
+	height: 450px;
+	width:50vw;
+    max-width: 400px;
+	border-radius: 4px;
+	margin: 0 auto;
+	/*This will set the margins for the top and the bottom to 150px (or larger). The right and left will automatically set themselves (and keep the box centered horizontally).*/
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, .9);
+	/*This will give the box some depth.*/
+	padding: 50px;
+	line-height: 120%;
+    color: white;
+}
+
+.modal-button {
+    padding: 14px 18px;
+    background-color: #677996;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Dice Roll CSS */
+    
+#dice-roll {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    overflow: auto;
+}
+    
+#dice-roll-btn {
+    margin-right: 0px;
+    margin-left: 200px;
+    position: relative;
+}
+    
+#side {
+    position: absolute;
+    top: 1vmin;
+    left: 1vmin;
+    height: 25vmin;
+    width: 35vmin;
+    border: 0.2vmin solid black;
+    background-color: lightseagreen;
+    text-align: center;
+    font-size: 3.5vmin;
+    border: none;
+    border-radius: 4px;
+    padding: 3px;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+    
+#cube_outer {
+    height: 8vmin;
+    width: 8vmin;
+    perspective: 30vmin;
+    margin: auto;
+}
+    
+#cube_inner {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform: all .75s linear;
+}
+    
+#cube_inner div {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    border: solid black;
+}
+    
+#front{
+    transform: translateZ(4vmin);
+}
+    
+#back {
+    transform: rotateY(180deg) translateZ(4vmin)
+}
+    
+#left {
+    transform: rotateY(-90deg) translateX(-4vmin);
+    transform-origin: left;
+}
+    
+#right {
+    transform: rotateY(90deg) translateX(4vmin);
+    transform-origin: right;
+}
+    
+#top {
+    transform: rotateX(-90deg) translateY(-4vmin);
+    transform-origin: top;
+}
+    
+#bottom {
+    transform: rotateX(90deg) translateY(4vmin);
+    transform-origin: bottom;
+}
